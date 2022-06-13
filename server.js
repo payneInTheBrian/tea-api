@@ -5,7 +5,7 @@ const PORT = 8000
 
 app.use(cors())
 
-const tea = {
+const beatle = {
         'oolong':{
             'type': 'black',
             'origin': 'To mommas HOuse',
@@ -38,12 +38,12 @@ app.get('/', (request, response)=>{
 
 app.get('/api/:name', (request, response)=>{
     const beatleName = request.params.name.toLowerCase()
-    if( tea[beatleName] ){
-        response.json(tea[beatleName])
+    if( beatle[beatleName] ){
+        response.json(beatle[beatleName])
     }else{
-        response.json(tea['unknown'])
+        response.json(beatle['unknown'])
     }
-    response.json(tea)
+    response.json(beatle)
 })
 
 app.listen(process.env.PORT || PORT, ()=>{
