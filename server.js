@@ -37,9 +37,9 @@ app.get('/', (request, response)=>{
 })
 
 app.get('/api/:name', (request, response)=>{
-    const teaName = request.params.name.toLowerCase()
-    if( tea[teaName] ){
-        response.json(tea[teaName])
+    const beatleName = request.params.name.toLowerCase()
+    if( tea[beatleName] ){
+        response.json(tea[beatleName])
     }else{
         response.json(tea['unknown'])
     }
