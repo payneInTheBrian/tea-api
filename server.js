@@ -60,7 +60,7 @@ app.get('/api/:name', (request, response)=>{
     }else{
         response.json(beatle['unknown'])
     }
-    response.json(tea)
+    response.json(beatle)
 })
 
 app.listen(process.env.PORT || PORT, ()=>{
