@@ -5,39 +5,15 @@ const PORT = 8000
 
 app.use(cors())
 
-const beatle = {
-        'paul':{
-            
-            'instrument': 'Bass, Vocals, Piano, Organ?',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
-        },
-        'john':{
-            
-            'instrument': 'Guitar, Piano, Vocals',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
-        },
-        'george':{
-            'type': 'green',
+const tea = {
+        'oolong':{
+            'type': 'black',
             'origin': 'To mommas HOuse',
             'waterTemp': 200,
             'steepTime': 180,
             'caffinated': true,
             'flavor': 'delicious'
         },
-        'ringo':{
-            'type': 'green',
-            'origin': 'To mommas HOuse',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
-        }
         'unknown':{
             'type': 'unkown',
             'origin': 'unknown',
@@ -45,8 +21,15 @@ const beatle = {
             'steepTime': 'unknown',
             'caffinated': 'false',
             'flavor': 'unknown'
+        },
+        'matcha':{
+            'type': 'green',
+            'origin': 'To mommas HOuse',
+            'waterTemp': 200,
+            'steepTime': 180,
+            'caffinated': true,
+            'flavor': 'delicious'
         }
-        
 }
 
 app.get('/', (request, response)=>{
@@ -54,13 +37,13 @@ app.get('/', (request, response)=>{
 })
 
 app.get('/api/:name', (request, response)=>{
-    const beatleName = request.params.name.toLowerCase()
-    if( beatle[beatleName] ){
-        response.json(beatle[beatleName])
+    const teaName = request.params.name.toLowerCase()
+    if( tea[teaName] ){
+        response.json(tea[teaName])
     }else{
-        response.json(beatle['unknown'])
+        response.json(tea['unknown'])
     }
-    response.json(beatle)
+    response.json(tea)
 })
 
 app.listen(process.env.PORT || PORT, ()=>{
