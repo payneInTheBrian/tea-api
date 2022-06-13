@@ -7,7 +7,7 @@ app.use(cors())
 
 const beatle = {
         'paul':{
-            'name': 'Paul McCartney',
+            
             'instrument': 'Bass, Vocals, Piano, Organ?',
             'waterTemp': 200,
             'steepTime': 180,
@@ -15,14 +15,14 @@ const beatle = {
             'flavor': 'delicious'
         },
         'john':{
-            'name': 'John Lennon',
+            
             'instrument': 'Guitar, Piano, Vocals',
             'waterTemp': 200,
             'steepTime': 180,
             'caffinated': true,
             'flavor': 'delicious'
         },
-        'matcha':{
+        'george':{
             'type': 'green',
             'origin': 'To mommas HOuse',
             'waterTemp': 200,
@@ -30,7 +30,7 @@ const beatle = {
             'caffinated': true,
             'flavor': 'delicious'
         },
-        'matcha':{
+        'ringo':{
             'type': 'green',
             'origin': 'To mommas HOuse',
             'waterTemp': 200,
