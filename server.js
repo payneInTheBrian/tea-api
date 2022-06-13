@@ -6,8 +6,32 @@ const PORT = 8000
 app.use(cors())
 
 const beatle = {
-        'oolong':{
+        'john':{
             'type': 'black',
+            'origin': 'To mommas HOuse',
+            'waterTemp': 200,
+            'steepTime': 180,
+            'caffinated': true,
+            'flavor': 'delicious'
+        },
+        'paul':{
+            'type': 'green',
+            'origin': 'To mommas HOuse',
+            'waterTemp': 200,
+            'steepTime': 180,
+            'caffinated': true,
+            'flavor': 'delicious'
+        },
+        'george':{
+            'type': 'green',
+            'origin': 'To mommas HOuse',
+            'waterTemp': 200,
+            'steepTime': 180,
+            'caffinated': true,
+            'flavor': 'delicious'
+        },
+        'ringo':{
+            'type': 'green',
             'origin': 'To mommas HOuse',
             'waterTemp': 200,
             'steepTime': 180,
@@ -22,14 +46,6 @@ const beatle = {
             'caffinated': 'false',
             'flavor': 'unknown'
         },
-        'matcha':{
-            'type': 'green',
-            'origin': 'To mommas HOuse',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
-        }
 }
 
 app.get('/', (request, response)=>{
