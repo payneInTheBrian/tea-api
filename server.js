@@ -6,45 +6,41 @@ const PORT = 8000
 app.use(cors())
 
 const beatle = {
-        'john':{
-            'type': 'black',
-            'origin': 'To mommas HOuse',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
+        'john lennon':{
+            'vocals': true,
+            'origin': 'Liverpool',
+            'Born': 1940,
+            'Death': 1980,
+            'instruments': 'Guitar and Piano/Keys'
         },
-        'paul':{
-            'type': 'green',
-            'origin': 'To mommas HOuse',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
+        'paul mccartney':{
+            'vocals': true,
+            'origin': 'Liverpool',
+            'Born': 1942,
+            'Death': 'TBD',
+            'instruments': 'Bass, Piano/Keys, Guitar, and Drums'
         },
-        'george':{
-            'type': 'green',
-            'origin': 'To mommas HOuse',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
+        'george harrison':{
+            'vocals': true,
+            'origin': 'Liverpool',
+            'Born': 1943,
+            'Died': 2001,
+            'instruments': "Guitar and Sitar"
         },
-        'ringo':{
-            'type': 'green',
-            'origin': 'To mommas HOuse',
-            'waterTemp': 200,
-            'steepTime': 180,
-            'caffinated': true,
-            'flavor': 'delicious'
+        'ringo starr':{
+            'vocals': true,
+            'origin': 'Liverpool',
+            'Born': 1940,
+            'Died': 'TBD',
+            'instruments': 'Drums and Percussion'
         },
         'unknown':{
-            'type': 'unkown',
+            'vocals': 'unkown',
             'origin': 'unknown',
-            'waterTemp': 'unknown',
-            'steepTime': 'unknown',
-            'caffinated': 'false',
-            'flavor': 'unknown'
+            'Born': 'unknown',
+            'Died': 'unknown',
+            'Instruments': 'false',
+            
         },
 }
 
