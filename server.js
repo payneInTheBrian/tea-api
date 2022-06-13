@@ -5,22 +5,30 @@ const PORT = 8000
 
 app.use(cors())
 
-const tea = {
-        'oolong':{
-            'type': 'black',
-            'origin': 'To mommas HOuse',
+const beatle = {
+        'paul':{
+            'name': 'Paul McCartney',
+            'instrument': 'Bass, Vocals, Piano, Organ?',
             'waterTemp': 200,
             'steepTime': 180,
             'caffinated': true,
             'flavor': 'delicious'
         },
-        'unknown':{
-            'type': 'unkown',
-            'origin': 'unknown',
-            'waterTemp': 'unknown',
-            'steepTime': 'unknown',
-            'caffinated': 'false',
-            'flavor': 'unknown'
+        'john':{
+            'name': 'John Lennon',
+            'instrument': 'Guitar, Piano, Vocals',
+            'waterTemp': 200,
+            'steepTime': 180,
+            'caffinated': true,
+            'flavor': 'delicious'
+        },
+        'matcha':{
+            'type': 'green',
+            'origin': 'To mommas HOuse',
+            'waterTemp': 200,
+            'steepTime': 180,
+            'caffinated': true,
+            'flavor': 'delicious'
         },
         'matcha':{
             'type': 'green',
@@ -30,6 +38,15 @@ const tea = {
             'caffinated': true,
             'flavor': 'delicious'
         }
+        'unknown':{
+            'type': 'unkown',
+            'origin': 'unknown',
+            'waterTemp': 'unknown',
+            'steepTime': 'unknown',
+            'caffinated': 'false',
+            'flavor': 'unknown'
+        }
+        
 }
 
 app.get('/', (request, response)=>{
@@ -37,11 +54,11 @@ app.get('/', (request, response)=>{
 })
 
 app.get('/api/:name', (request, response)=>{
-    const teaName = request.params.name.toLowerCase()
-    if( tea[teaName] ){
-        response.json(tea[teaName])
+    const beatleName = request.params.name.toLowerCase()
+    if( beatle[beatleName] ){
+        response.json(beatle[beatleName])
     }else{
-        response.json(tea['unknown'])
+        response.json(beatle['unknown'])
     }
     response.json(tea)
 })
