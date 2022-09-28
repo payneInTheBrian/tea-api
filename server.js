@@ -34,12 +34,13 @@ const beatle = {
             'Died': 'TBD',
             'instruments': 'Drums and Percussion'
         },
-        'unknown':{
-            'vocals': 'unkown',
+        'honorary-beatle':{
+            'beatle': 'honorary beatle'
+            'vocals': 'tries',
             'origin': 'unknown',
             'Born': 'unknown',
             'Died': 'unknown',
-            'Instruments': 'false',
+            'Instruments': 'tamborine',
             
         },
 }
@@ -53,7 +54,7 @@ app.get('/api/:name', (request, response)=>{
     if( beatle[beatleName] ){
         response.json(beatle[beatleName])
     }else{
-        response.json(beatle['unknown'])
+        response.json(beatle['honorary-beatle'])
     }
     response.json(beatle)
 })
